@@ -4,7 +4,7 @@ import pytorch_lightning as pl
 
 from fastmri.data.subsample import create_mask_for_mask_type
 
-from twod import KspaceDataTransform, FastMriDataModule,FastMRIRawDataSample, CustomUnetDataTransform, CustomSliceDataset, MriModule, UnetModule
+from utils import KspaceDataTransform, FastMriDataModule,FastMRIRawDataSample, CustomUnetDataTransform, CustomSliceDataset, MriModule, UnetModule
 from pytorch_lightning.strategies.ddp import DDPStrategy
 
 #define mask 
