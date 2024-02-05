@@ -33,7 +33,7 @@ https://github.com/facebookresearch/fastMRI
 This file contains the classes that can be used to train 2D input channel Unets
 If the goal is to train on the real image, one can either use the default classes of FastMRI
 Library combined with some functions of this file, as done in the tutorial, 
-or use only the functions in this file. (by inputting 'real' as the approach in transform)
+or use only the functions in this file. (by inputting 'real' as the approach in the transform object)
 For 2D channel training, this file contains all the functions needed for 
 the task. 
 The important classes in this file are: 
@@ -55,8 +55,7 @@ class KspaceDataTransform(UnetDataTransform) :
     Extra Args:
         platform: either "pytorch" or "lightning", the returned data 
             is suited to the selected platform. By selecting pytormasked_kspace = kspace_torch*torch.from_numpy(self.mask_func).unsqueeze(-1)+ 0.0h the data 
-            can be put into a torch.utils.data.DataLoader, refer to the tutorial 
-            for "lightning".
+            can be put into a torch.utils.data.DataLoader.
         objective: either "kspace" or "image", returns the masked kspace and target
             kspace or the masked image and the target image. 
             Each datapoint has dimension [2,320,320]
