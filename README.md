@@ -8,3 +8,4 @@ The repository contains:
 3. Classes that were modified to make 2 input network training possible (data loading, loss calculations, image and metrics logging to Tensorboard) while still supporting 1 input network, thus creating a unifying framework for future MRI acceleration research.
    
    
+We obtained an approximately 20% increase in key metrics such as PSNR, MSE and SSIM compared to baseline non deep learning models. 
